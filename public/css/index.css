@@ -70,3 +70,102 @@ a[class$='big'] {
     color: green;
     background:red;
 }
+
+#test:target {
+    color:red;
+}
+
+.link:link {
+    color:red;
+}
+
+.link:hover {
+    color:green;
+}
+
+.card:hover {
+    background:pink;
+}
+
+.link:active {
+    color:violet;
+}
+
+.card:active {
+    background-color: orange;
+}
+
+input {
+    background-color: grey;
+}
+
+input:focus {
+    background-color: yellow;
+}
+
+.card:focus-within {
+    background: aquamarine;
+}
+
+.card:lang(ua) {
+    background: yellow;
+}
+
+.card:lang(en) > span::after {
+    content: ' en';
+}
+
+button {
+    background-color: greenyellow;
+}
+
+button:enabled {
+    background-color: rgb(156, 245, 156);
+}
+
+button:disabled {
+    background-color: aqua;
+}
+
+.inp:read-write {
+    background-color: blue;
+}
+
+.inp:read-only {
+    background-color: green;
+}
+
+input[type='checkbox']:checked ~ span {
+    background-color: red;
+}
+
+.valid:valid {
+    background-color: green;
+}
+
+.valid:invalid {
+    background-color: dodgerblue;
+}
+
+.valid:optional {
+    background-color:darkkhaki;
+}
+
+.number:focus {
+    background-color: azure;
+}
+.number:out-of-range {
+    background-color: red;
+}
+
+.number:in-range {
+    background-color: green;
+}
+
+.number:invalid {
+    background-color: yellow;
+}
+
+input:placeholder-shown ~ span {
+    background-color: chartreuse;
+}
