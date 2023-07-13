@@ -107,7 +107,7 @@ input:focus {
     background: aquamarine;
 }
 
-.card:lang(ua) {
+.card:lang(uk) {
     background: yellow;
 }
 
