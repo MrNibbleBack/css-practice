@@ -1,0 +1,467 @@
+/* Selectors part 1 */
+
+/** root selector**/
+:root {
+    background:purple;
+  }
+  
+  /** tag selector**/
+  html {
+    max-width: 720px;
+  
+    /** tag selector**/
+    background:blue;    
+  }
+  
+  /** tag selector**/
+  body {
+    background: #fff;
+  }
+  
+  
+  /* global selector */
+  /* * {
+    background: olive;
+    color: red;
+  } */
+  
+  /* global selector */
+  /* * {
+    color:red;
+  } */
+  
+  /* class selector */
+  .box {
+    background:rgb(189, 178, 178);
+  }
+  
+  /* identificator selector */
+  #user,
+  .user {
+    color:blue;
+  }
+  
+  /* some selectors, use comma */
+  h1, 
+  h2, 
+  button {
+   color:green;
+  }
+  
+  
+  /* .button{
+    background:red;
+    color:black;
+  } */
+  
+  h2.button{
+    background:red;
+    color:black;
+  }
+  
+  button.button{
+    background:red;
+    color:black;
+  }
+  
+  /* h1,
+  h2#user,
+  button.button {
+  color:green;
+  } */
+  
+  h1,
+  h2#user,
+  button.button#button {
+  color:green;
+  background:burlywood
+  }
+  
+  /* children selector */
+  /* дочірній селектор */
+  
+  div > p {
+    color:turquoise;
+  }
+  
+  .box > p {
+    color:rgb(134, 14, 231);
+  }
+  
+  #box > p {
+    color:blueviolet;
+  }
+  
+  footer > .user {
+    color:chartreuse;
+  }
+  
+  /* селектор нашадка */
+  footer em {
+    color:rgb(144, 0, 255);
+  }
+  
+  /* сестринський селектор */
+  /* .p-top {
+    background:black;
+  } */
+  
+  h1 + p {
+    background:black;
+  }
+  
+  h1 + p,
+  h1 + em {
+    background:black;
+  }
+  
+  h1 + .test {
+    background:black;
+  }
+  
+  /* Сусідський селектор */
+  h1 ~ p,
+  h1 ~ div > p {
+    background:black;
+  }
+  
+  h1 ~ p,
+  h1 ~ * > p {
+    background:black;
+  }
+  
+  
+  /* селектор нащадка >> в преттієра не працює, в нових версіях css 
+  використовувати просто пробіл
+  footer >> em {
+    color:rgb(144, 0, 255);
+  } */
+
+/* Selectors part 2 */
+
+.card-dark {
+    background:rgb(235, 237, 198) ;
+}
+
+.item {
+    color:green;
+}
+
+/* .item-first {
+    color:red;
+} */
+
+/* li:first-child {
+    color:blue;
+} */
+
+.item:first-child {
+    color:blue;
+}
+
+.item:last-child {
+    color:rgb(29, 132, 206);
+}
+
+.item:only-child {
+    color:red;
+}
+
+/* .item:first-of-type {
+    color:orange;
+} */
+
+article:first-of-type {
+    color:orange;
+}
+
+.item-first-type:first-of-type {
+    color:rgb(54, 115, 228)
+}
+
+.item-last-type:last-of-type {
+    color:rgb(54, 115, 228)
+}
+
+.item-only:only-of-type {
+    color:rgb(54, 115, 228)
+}
+
+.item-nchild:nth-child(3n+1) {
+    color:red;
+}
+
+.item-nlastchild:nth-last-child(3n+1) {
+    color:red;
+}
+
+.item-ntypechild:nth-of-type(2n) {
+    color:red;
+}
+
+.item-nlasttypechild:nth-last-of-type(2n) {
+    color:red;
+}
+
+p:not(.item-nlasttypechild) {
+    color:rgb(56, 154, 4);
+}
+
+.item-nlasttypechild:not(p) {
+    color:blue
+}
+
+p:empty{
+    height:10px;
+    background:red;
+}
+
+/* Selectors part 3 */
+
+.card-dark {
+    background:lightgrey;
+}
+
+.input-dark {
+    background: rgb(69, 69, 66);
+}
+
+.input-dark[required] {
+    background:lightyellow;
+}
+
+.input-dark[type="number"] {
+    background:yellow;
+}
+
+.small-img[alt~="small"] {
+    height:500px;
+}
+
+/* .card[class~="img"] {
+    height:500px;
+}
+*/
+/* .card.img {
+    height: 500px;
+}
+  */
+
+.small-img[alt~='small'] {
+    height:500px;
+}
+
+a[rel~='external'] {
+    color:green;
+}
+
+button[class|="btn"] {
+    background:red;
+}
+
+a[class^='btn'] {
+    background:wheat;
+}
+
+a[class*='btn'] {
+    background:wheat;
+}
+
+a[class$='big'] {
+    background:darkorange;
+}
+
+.btn::first-letter {
+    color:red;
+}
+
+.big-text::first-line {
+    color:red;
+}
+
+.input-dark::placeholder {
+    color:yellow;
+    background:blue;
+}
+
+.big-text::before,
+.big-text::after {
+    content: '$$$';
+    color: green;
+    background:red;
+}
+
+/* Selectors part 4 */
+
+.card-dark {
+    background:lightgrey;
+}
+
+.input-dark {
+    background: rgb(69, 69, 66);
+}
+
+.input-dark[required] {
+    background:lightyellow;
+}
+
+.input-dark[type="number"] {
+    background:yellow;
+}
+
+.small-img[alt~="small"] {
+    height:500px;
+}
+
+/* .card[class~="img"] {
+    height:500px;
+}
+*/
+/* .card.img {
+    height: 500px;
+}
+  */
+
+.small-img[alt~='small'] {
+    height:500px;
+}
+
+a[rel~='external'] {
+    color:green;
+}
+
+button[class|="btn"] {
+    background:red;
+}
+
+a[class^='btn'] {
+    background:wheat;
+}
+
+a[class*='btn'] {
+    background:wheat;
+}
+
+a[class$='big'] {
+    background:darkorange;
+}
+
+.btn::first-letter {
+    color:red;
+}
+
+.big-text::first-line {
+    color:red;
+}
+
+.input-dark::placeholder {
+    color:yellow;
+    background:blue;
+}
+
+.big-text::before,
+.big-text::after {
+    content: '$$$';
+    color: green;
+    background:red;
+}
+
+#test:target {
+    color:red;
+}
+
+.link:link {
+    color:red;
+}
+
+.link:hover {
+    color:green;
+}
+
+.card:hover {
+    background:pink;
+}
+
+.link:active {
+    color:violet;
+}
+
+.card:active {
+    background-color: orange;
+}
+
+input {
+    background-color: grey;
+}
+
+input:focus {
+    background-color: yellow;
+}
+
+.card:focus-within {
+    background: aquamarine;
+}
+
+.card:lang(uk) {
+    background: yellow;
+}
+
+.card:lang(en) > span::after {
+    content: ' en';
+}
+
+button {
+    background-color: greenyellow;
+}
+
+button:enabled {
+    background-color: rgb(156, 245, 156);
+}
+
+button:disabled {
+    background-color: aqua;
+}
+
+.inp:read-write {
+    background-color: blue;
+}
+
+.inp:read-only {
+    background-color: green;
+}
+
+input[type='checkbox']:checked ~ span {
+    background-color: red;
+}
+
+.valid:valid {
+    background-color: green;
+}
+
+.valid:invalid {
+    background-color: dodgerblue;
+}
+
+.valid:optional {
+    background-color:darkkhaki;
+}
+
+.number:focus {
+    background-color: azure;
+}
+.number:out-of-range {
+    background-color: red;
+}
+
+.number:in-range {
+    background-color: green;
+}
+
+.number:invalid {
+    background-color: yellow;
+}
+
+input:placeholder-shown ~ span {
+    background-color: chartreuse;
+}
+

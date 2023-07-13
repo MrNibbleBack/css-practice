@@ -1,171 +1,159 @@
-.card-dark {
-    background:lightgrey;
+/* Color HEX */
+/* p {
+    color: #05043E;
+} */
+
+/* Color RGB */
+/* p {
+    color: rgb(41, 128, 6);
 }
 
-.input-dark {
-    background: rgb(69, 69, 66);
-}
+p {
+    background: rgb(25, 11, 178);
+} */
 
-.input-dark[required] {
-    background:lightyellow;
-}
+/* Color RGBA */
+/* p {
+    color: rgba(223, 223, 10, 0.5);
+} */
 
-.input-dark[type="number"] {
-    background:yellow;
-}
+/* Color RGBA https://hslpicker.com/#2ac322*/
+/* .card > p {
+    color:hsla(117, 70%, 45%, 1)
+} */
 
-.small-img[alt~="small"] {
-    height:500px;
-}
+/* Text-fill-color, text-stroke, -webkit- */
 
-/* .card[class~="img"] {
-    height:500px;
-}
-*/
-/* .card.img {
-    height: 500px;
-}
-  */
-
-.small-img[alt~='small'] {
-    height:500px;
-}
-
-a[rel~='external'] {
+.card > p {
     color:green;
+    -webkit-text-fill-color: red;
+    -webkit-text-stroke: 1px blue;
 }
 
-button[class|="btn"] {
-    background:red;
+p:focus,
+p:active,
+p:hover {
+    -webkit-text-fill-color: rgb(220, 220, 16);
+    -webkit-text-stroke: 1px rgb(26, 225, 66);
+
+    direction:rtl;
 }
 
-a[class^='btn'] {
-    background:wheat;
+.card {
+    color: red;
+}
+#test {
+    color:initial;
+    -webkit-text-fill-color:initial;
+    -webkit-text-stroke:initial;
 }
 
-a[class*='btn'] {
-    background:wheat;
+#test {
+    color:inherit;
+    -webkit-text-fill-color:inherit;
+    -webkit-text-stroke:inherit;
 }
 
-a[class$='big'] {
-    background:darkorange;
+#test {
+    color:unset;
+    -webkit-text-fill-color:unset;
+    -webkit-text-stroke:unset;
 }
 
-.btn::first-letter {
-    color:red;
+/* .card {
+    border: 10px dotted;
 }
 
-.big-text::first-line {
-    color:red;
+.card {
+    border:none;
+} */
+
+#test {
+    color:unset;
+    -webkit-text-fill-color:unset;
+    -webkit-text-stroke:unset;
+
+    /* writing-mode: vertical-rl; */
+    writing-mode: vertical-lr;
 }
 
-.input-dark::placeholder {
-    color:yellow;
-    background:blue;
+/* #test {
+    color:unset;
+    -webkit-text-fill-color:unset;
+    -webkit-text-stroke:unset;
+    writing-mode:horizontal-tb;
+    text-align: center;
+} */
+
+#test {
+    color:unset;
+    -webkit-text-fill-color:unset;
+    -webkit-text-stroke:unset;
+    writing-mode:horizontal-tb;
+    text-align: justify;
 }
 
-.big-text::before,
-.big-text::after {
-    content: '$$$';
-    color: green;
-    background:red;
+span {
+    text-align: left;
+    text-transform: uppercase;
 }
 
-#test:target {
-    color:red;
+/* Tab size */
+/* tab size css mozilla https://developer.mozilla.org/en-US/docs/Web/CSS/tab-size  */
+pre {
+    /* tab-size: 15px; */
+    tab-size: 3;
 }
 
-.link:link {
-    color:red;
+#test {
+    color:unset;
+    -webkit-text-fill-color:unset;
+    -webkit-text-stroke:unset;
+    writing-mode:horizontal-tb;
+    text-align: justify;
+     /* letter-spacing: normal; */
+     /* letter-spacing: 50px; */
+     letter-spacing: 0.06em;
 }
 
-.link:hover {
-    color:green;
+span {
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: underline solid red;
 }
 
-.card:hover {
-    background:pink;
+/* .span-b {
+    text-decoration-color: blue;
+    text-decoration-line: line-through;
+    text-decoration-style: solid;
+} */
+
+span:hover {
+    text-decoration-line: line-through;
+    /* text-decoration-style: double; */
+    text-decoration-style: wavy;
 }
 
-.link:active {
-    color:violet;
+* {
+    font-family: 'Roboto', Arial, sans-serif;
+    /* font-family: cursive; */
+    /* font-family: fantasy; */
+    /* font-family: monospace; */
+    font-size: 18px;
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
 }
 
-.card:active {
-    background-color: orange;
-}
+span {
+    /* font-size:xx-large; */
+    font-size: larger;
 
-input {
-    background-color: grey;
+    font-weight: lighter;
+    /* font-weight: bolder; */
+    /* font-weight: lighter; */
+    font-style: oblique;
 }
-
-input:focus {
-    background-color: yellow;
-}
-
-.card:focus-within {
-    background: aquamarine;
-}
-
-.card:lang(uk) {
-    background: yellow;
-}
-
-.card:lang(en) > span::after {
-    content: ' en';
-}
-
-button {
-    background-color: greenyellow;
-}
-
-button:enabled {
-    background-color: rgb(156, 245, 156);
-}
-
-button:disabled {
-    background-color: aqua;
-}
-
-.inp:read-write {
-    background-color: blue;
-}
-
-.inp:read-only {
-    background-color: green;
-}
-
-input[type='checkbox']:checked ~ span {
-    background-color: red;
-}
-
-.valid:valid {
-    background-color: green;
-}
-
-.valid:invalid {
-    background-color: dodgerblue;
-}
-
-.valid:optional {
-    background-color:darkkhaki;
-}
-
-.number:focus {
-    background-color: azure;
-}
-.number:out-of-range {
-    background-color: red;
-}
-
-.number:in-range {
-    background-color: green;
-}
-
-.number:invalid {
-    background-color: yellow;
-}
-
-input:placeholder-shown ~ span {
-    background-color: chartreuse;
+.test {
+    font-weight: lighter;
 }
