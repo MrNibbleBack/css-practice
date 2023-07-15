@@ -157,3 +157,54 @@ span {
 .test {
     font-weight: lighter;
 }
+
+/* .modern {
+    border:0.1mm solid grey;
+    margin-inline:10% 30%;
+}
+
+.modern p {
+    color:lab(50 -20 -10);
+}
+
+.modern span {
+    color:lch(70 50 120);
+} */
+/* .modern pre {
+    color:color-mix(in yellow, 30%, 50%);
+    color:color-mix(#ff0000, #0000ff)
+} */
+
+/* .modern button {
+    background-color: green;
+    accent-color:blue;
+} */
+
+/* .modern h2 {
+    text-emphasis: dot #112233;
+    text-emphasis: 'x' blue;
+    text-emphasis: filled red;
+} */
+
+.test {
+    display:none;
+}
+
+.block {
+    display:block;
+    background: rgb(208, 208, 208);
+    /* margin: 10px; */
+    /* margin: 50%; */
+    margin: auto;
+    /* margin-left: 50px; */
+    /* width: 250px; */
+    /* width: 10%; */
+    /* height: min-content;
+    min-height:max-content; */
+    width: 100%;
+    max-width: 600px;
+}
+
+.inline-block {
+    display: inline-block;
+}
