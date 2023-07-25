@@ -1,3 +1,8 @@
+:root {
+    --text-color:green;
+    --space-medium: 24px;
+}
+
 .page {
     background: #ffffff;
     padding: 0 15px;
@@ -10,7 +15,7 @@
 }
 
 .header {
-    padding: 24px;
+    padding: var(--space-medium);
     border-bottom: 1px solid #dee2e6;
 }
 
@@ -36,7 +41,9 @@
 
 .nav_link:hover {
     text-decoration: underline;
-    color:blue;
+    /* color:blue; */
+
+    opacity: 50%;
 }
 
 .nav_vertical > .nav_link {
@@ -44,7 +51,7 @@
 }
 
 .nav_inline > .nav_link:not(:last-child) {
-    margin-right: 24px;
+    margin-right: var(--space-medium);
 }
 
 .nav_vertical > .nav_link:not(:last-child) {
@@ -61,7 +68,7 @@ margin-bottom: 80px;
 }
 
 .footer {
-    padding: 24px 0;
+    padding: var(--space-medium) 0;
     border-top: 1px solid #dee2e6;
 }
 
@@ -74,14 +81,14 @@ margin-bottom: 80px;
 
 .footer_title {
     font-size: 20px;
-    color: #212529;
+    color: var(--text-color, #212529);
     display: block;
     margin: 12px;
 }
 
 .hero_title {
     font-size: 56px;
-    color: #212529;
+    color: var(--text-color, #212529);
     font-weight: 500;
     margin-bottom: 12px;
     text-align: center;
@@ -103,14 +110,17 @@ margin-bottom: 80px;
     background:gray;
     /* text-align: left; */
     font-size: 20px;
-    color: #212529;
+    color: var(--text-color, #212529);
     font-weight: 400;
     text-align: center;
     /* max-width: 585px; */
-    max-width: 200px;
+    /* max-width: 200px; */
+    max-width: 600px;
     /* width: min-content; */
     /* width: 100px; */
-    width: 200px;
+    /* width: 200px; */
+    width: 600px;
+    height: 400px;
     margin:0 auto;
     /* line-height: 150%; */
     /* line-height: 2; */
@@ -128,9 +138,27 @@ margin-bottom: 80px;
     hyphens: manual;
 
     overflow:auto;
-    resize: both;
+    /* resize: both; */
 
     word-spacing: 10px;
+    /* columns: 3; */
+    /* column-gap: 0; */
+    /* column-gap: 30px; */
+    /* column-gap: 30%; */
+    /* column-gap: 1em; */
+    /* column-rule: dotted; */
+    /* column-rule: dashed; */
+    /* column-rule: solid blue; */
+    /* column-rule: 10px solid green; */
+    /* column-rule: thick inset red; */
+    /* column-rule-width: thin; */
+
+    /* column-rule-style: ridge;
+    column-rule-color: #88f; */
+
+    /* column-rule-style: dotted;
+
+    column-span: all; */
 }
 
 .overflow {
@@ -152,7 +180,7 @@ p {
 }
 
 .plans_card:not(:last-of-type) {
-    margin-right: 24px;
+    margin-right: var(--space-medium);
 }
 
 /* .plans_card:nth-child(2) > .card {
@@ -170,17 +198,17 @@ p {
 .card_header {
     padding: 12px;
     text-align: center;
-    font-size: 24px;
-    color: #212529;
+    font-size: var(--space-medium);
+    color: var(--text-color, #212529);
 }
 
 .card_body {
-    padding: 24px;
+    padding: var(--space-medium);
 }
 
 .card_price_amount {
     font-size: 40px;
-    color: #212529;
+    color: var(--text-color, #212529);
 }
 
 .card_price_duration {
@@ -200,12 +228,12 @@ p {
 }
 
 .card_block:not(:last-of-type) {
-    margin-bottom: 24px;
+    margin-bottom: var(--space-medium);
 }
 
 .card_description_item {
     font-size: 16px;
-    color: #212529;
+    color: var(--text-color, #212529);
     display: block;
 }
 
@@ -243,6 +271,9 @@ p {
     outline-offset: 5px;
     box-shadow: 7px 7px 10px 1px rgba(72, 215, 225, 0.254);
     cursor:pointer;
+
+    opacity: 0.5;
+    /* opacity: 50%; */
 }
 
 .btn {
@@ -262,3 +293,160 @@ h1 {
     /* text-shadow: -20px -20px 2px blue; */
 }
 
+/* Check if the color of .page is transparent set body background color red */
+body {
+    /* background: red; */
+    /* background-image: radial-gradient(50.00% 50.00% at 58.66% 50%, rgba(40, 158, 244, 0.40) 0%, rgba(239, 243, 246, 0.23) 100%);; */
+    /* background-image: url('/img/test.png'); */
+    /* background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: no-repeat; */
+    /* background-repeat: space; */
+    /* background-repeat: round; */
+}
+.page {
+    /* background-color: transparent; */
+    /* The alternative way to set transparent background is below*/
+    /* background-color: rgba(72, 215, 225, 0); 
+    background-image: url('/img/test2.jpg');
+    background-repeat: no-repeat; */
+    /* background-position-x: 10%; */
+    /* background-position-y: 40%; */
+    /* background-position: top; */
+    /* background-position: bottom left; */
+    /* background-position: center left;
+    background-position: top center; */
+    /* background-position: 50% 50%; */
+    /* background-position: center;
+    background-attachment: fixed; */
+    /* background-size: contain; */
+    /* background-size: cover; */
+}
+
+.hero_text {
+    /* background-image: url('/img/test.png'); */
+
+    /* Це паралакс-ефект - сторінка прокручується на фоні нерухомої картинки виствітлюючі її відповідні частини. */
+    /* background-image: url('/img/test2.jpg'); */
+    /* background-attachment: fixed; */
+
+    /* background-attachment: local;
+    height: 30px;
+    overflow: auto; */
+
+    /* background-color: transparent; */
+
+    /* background-image: url('/img/test2.jpg');
+    border: 20px solid transparent; */
+    padding: 40px;
+    color: yellow;
+    /* background-clip: padding-box; */
+    /* background-clip: content-box; */
+    /* background-clip: text;
+    -webkit-background-clip: text; */
+    /* background-origin: border-box; */
+    /* background-origin: padding-box; */
+    /* background-origin: content-box;
+    background-repeat: no-repeat; */
+
+    border-image-source: url('/img/test2.jpg');
+    /* border-image-width: 100px; */
+    /* border-image-width: auto; */
+    /* border-image-width: 10%; */
+    /* border-image-width: 10% 20% 5% 7%; */
+    border-image-width: 10% 10%;
+    /* border-image-slice: 600; */
+    border-image-slice: 10% 10%;
+
+    /* border-image-repeat: stretch; */
+    /* border-image-repeat: repeat; */
+    /* border-image-repeat: round; */
+    /* border-image-repeat: space; */
+    border-image-outset: 40px;
+}
+
+.card-block {
+    /* list-style-type: disc;
+    list-style-type: circle;
+    list-style-type: square;
+    list-style-type: decimal;
+    list-style-type: decimal-leading-zero;
+    list-style-type: upper-roman;
+    list-style-type: upper-latin;
+    list-style-type: upper-alpha;
+    list-style-type: lower-greek; */
+    /* list-style-type: lower-roman; */
+
+    list-style-position: inside;
+
+    /* list-style-image: url('/img/test.png'); */
+    list-style-image: linear-gradient(to bottom right, blue, red);
+
+    padding: 0;
+}
+
+.card_description_item {
+    display: list-item;
+}
+
+/* .table tr {
+    border: 1px solid grey;
+} */
+
+.table tr td {
+    border: 1px solid #17c423;
+    /* border-bottom: 1px solid red; */
+    border-bottom-color: red;
+    border-right-color: blue;
+}
+
+.table {
+    /* table-layout: auto; */
+    table-layout: fixed;
+    width: 600px;
+
+    /* border-collapse: separate; */
+    /* border-collapse: collapse; */
+    border-collapse: unset;
+    /* border-spacing: 10px; */
+    border-spacing: 10px 20px;
+
+    caption-side: top;
+
+    /* empty-cells: show; */
+    empty-cells: hide;
+}
+
+/* .nav_link::before {
+    content: open-quote;
+}
+
+.nav_link::after {
+    content: close-quote;
+} */
+
+.nav_link::before, .nav_link::after {
+        /* content: url('/img/test2.jpg'); */
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        /* background-color: red; */
+        background-image: url('/img/test2.jpg');
+}
+
+.nav_link::before {
+    margin-right: 15px;
+}
+
+.nav_link::after {
+    margin-left: 15px;
+}
+
+.calc {
+    width: 600 px;
+    /* margin-right: calc(100% - 600px) */
+    
+    /* Розмістити таблицю посередині */
+    margin-left: calc(50% - (600px / 2))
+}
