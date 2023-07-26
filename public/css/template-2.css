@@ -11,6 +11,9 @@
 .header {
     padding: 24px;
     border-bottom: 1px solid #dee2e6;
+
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo {
@@ -62,6 +65,9 @@ margin-bottom: 80px;
 .footer {
     padding: 24px 0;
     border-top: 1px solid #dee2e6;
+
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer_copyright {
@@ -96,6 +102,12 @@ margin-bottom: 80px;
     background: #343A40;
     border-radius: 24px;
     padding: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
 }
 
 .button {
@@ -178,6 +190,9 @@ margin-bottom: 12px;
     padding-bottom: 12px;
     border-bottom: 1px solid #DEE2E6;
     margin-bottom: 40px;
+
+    display: flex;
+    justify-content: space-between;
 }
 
 .category_button {
@@ -284,4 +299,102 @@ margin-bottom: 12px;
 
 .link_item:hover {
     text-decoration: underline;
+}
+
+.flex_container {
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse;  */
+
+    /* width: 50%; */
+
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse; */
+
+    /* Скорочений і швидкий запис одразу двох властивостей flex-direction та flex-wrap - flex-flow*/
+    /* flex-flow: row wrap; */
+
+    /* flex-wrap: nowrap; */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+    /* justify-content: stretch; */
+
+    /* align-content працює лише коли flex-wrap: wrap;!!! */
+    justify-content: center;
+    /* align-content: flex-start; */
+    /* align-content: baseline; Використовується дуже рідко */
+    /* align-content: flex-end; */
+    align-content: space-between;
+
+    /* Скорочений і швидкий запис одразу двох властивостей justify-content та align-content - place-content*/
+    /* place-content: flex-start center; */
+    /* align-items: flex-end; */
+    /* align-items: stretch; */
+    /* align-items: center; */
+    align-items: stretch;
+
+    /* height: 900px; */
+    /* border: 1px solid red; */
+    gap: 24px;
+}
+
+.flex_item {
+    /* overflow: hidden; */
+    /* width: 33%; */
+    /* width: 300px; */
+    /* width: 100px; */
+    /* width: 200px; */
+    /* background: gray; */
+    /* margin: 15px; */
+    /* width: 50%; */
+    /* margin: 15px; */
+
+    /* flex-basis: 100px; */
+    /* flex-basis: 50%; */
+    /* flex-basis: 300px; */
+    /* flex-grow: 1; */
+    /* flex-basis: 48%; */
+    flex-basis: calc(50% - (24px / 2));
+    order: 2;
+
+}
+
+.flex_item:first-of-type {
+    /* align-self: flex-end; */
+    /* height: 100px; */
+    /* margin-right: 24px;
+    margin-bottom: 24px; */
+    /* width: calc(50% - 24px) */
+
+    /* flex-basis: calc(50% - 24px); */
+
+    /* flex-grow: 2; */
+    /* flex-shrink: 0; */
+    flex-shrink: 5;
+}
+
+/* .flex_item:last-of-type { */
+    /* align-self: center; */
+    /* height: 300px; */
+/* } */
+
+.flex_item:nth-of-type(2) {
+    /* margin-bottom: 24px; */
+}
+
+.flex_item:nth-of-type(3) {
+    /* margin-right: 24px; */
+    /* width: calc(50% - 24px) */
+    /* flex-basis: calc(50% - 24px); */
+
+    /* flex-grow: 2; */
+
+    background: red;
+    order: -1;
 }
