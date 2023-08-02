@@ -1,7 +1,7 @@
 <header class="header">
-    <div class="">
+    <a href="#test">
         {{> logo}}
-    </div>
+    </a>
     <nav class="header_nav">
         <div class="header_nav_right">
             {{> nav list=header}}
@@ -9,30 +9,53 @@
     </nav>
 </header>
 
-{{#with main}}
-<div class="hero">
-    <img src="{{image}}" alt="Hero image" class="hero_image">
-    <div class="hero_content">
-        <h1 class="hero_title"> {{heading}} </h1>
-        <p class="hero_text"> {{descriotion}} </p>
-        <a href={{href}}"" class="hero_button"> {{button}} </a>
-    </div>
-</div>
-{{/with}}
-
 <main class="main">
-    {{#each featured}}
-    {{> cardT4 data=this}}
-    {{/each}}
+    {{#with messages}}
+    <div class="messages">
+        <h1 class="messages_title">{{title}}</h1>
+        {{#each list}}
+        <div class="msg">
+            <strong class="msg_name">{{name}}</strong>
+            <p class="msg_text">{{message}}</p>
+            <span class="msg_day">{{day}}</span>
+        </div>
+        {{/each}}
+        <a href="#" class="messages_link">All messages</a>
+    </div>
+    {{/with}}
+    {{#with form}}
+    <form class="form">
+        <h2 class="form_title">{{title}}</h2>
+
+        <div class="form_input_list">
+            {{#each inputs}}
+            <input type="{{type}}" placeholder="{{placeholder}}" class="form_input" name="{{name}}"
+                id="form-input-{{id}}">
+            {{/each}}
+        </div>
+
+        <div class="form_checkbox">
+            <input type="checkbox" name="{{checkbox.name}}" id="{{checkbox.name}}">
+            <div></div>
+            <label for="{{checkbox.name}}">{{checkbox.label}}</label>
+        </div>
+
+        <button type="submit" class="form_button">{{button}}</button>
+        <p class="form_info">{{info}}</p>
+    </form>
+    {{/with}}
 </main>
 
-<div class="form">
-    {{#each actions}}
-    {{> formT4 data=this}}
+<div class="advantages">
+    {{#each advantages}}
+    <div>
+        <strong>{{title}}</strong>
+        <p>{{text}}</p>
+    </div>
     {{/each}}
 </div>
 
-<footer class="footer">
+<footer class="footer" id="test">
     <div>
         {{> logo}}
         <span class="footer_copyright">Copyright 2023-2024</span>
